@@ -1,26 +1,26 @@
-#include "Polpança.h"
+#include "Poupanca.h"
 
-Polpanca::Polpanca(){
+Poupanca::Poupanca(){
     variacao = 0;
     taxaDeRendimento = 0;
 }
 
-Polpanca::Polpanca(string nc, int n, int v, double tdr){
+Poupanca::Poupanca(string nc, int n, int v, double tdr){
     setNomeCliente(nc);
     setNumero(n);
     setVariacao(v);
     setTaxaDeRendimento(tdr);
 }
 
-int Polpanca::getVariacao(){
+int Poupanca::getVariacao(){
     return variacao;
 }
 
-double Polpanca::getTaxaDeRendimento(){
+double Poupanca::getTaxaDeRendimento(){
     return taxaDeRendimento;
 }
 
-void Polpanca::setVariacao(int v){
+void Poupanca::setVariacao(int v){
     if(v < 0){
         variacao = 0;
     }else{
@@ -28,7 +28,7 @@ void Polpanca::setVariacao(int v){
     }
 }
 
-void Polpanca::setTaxaDeRendimento(double tdr){
+void Poupanca::setTaxaDeRendimento(double tdr){
     if(tdr < 0){
         taxaDeRendimento = 0;
     }else{
@@ -36,16 +36,18 @@ void Polpanca::setTaxaDeRendimento(double tdr){
     }
 }
 
-double Polpanca::render(){
+double Poupanca::render(){
     if(variacao == 51){
         return saldo * (taxaDeRendimento / 100);
     }else if(variacao == 1){
         return saldo * ((taxaDeRendimento / 100) + (0,5 / 100));
+    }else{
+        return -1;
     }
 }
 
-void Polpanca::print(){
-    cout<< "\n\nPolpanca\n\n"
+void Poupanca::print(){
+    cout<< "\n\nPoupanca\n\n"
         << "Nome: " << nomeCliente << endl
         << "Numero da conta: " << numero << endl
         << "Saldo: " << saldo  << " R$"<< endl

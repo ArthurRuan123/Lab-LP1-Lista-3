@@ -1,8 +1,8 @@
-#ifndef POLPANCA_H
-#define POLPANCA_H
+#ifndef POUPANCA_H
+#define POUPANCA_H
 #include "Conta.h"
 
-class Polpanca : public Conta{
+class Poupanca : public Conta{
 
     private:
 
@@ -11,8 +11,8 @@ class Polpanca : public Conta{
 
     public:
 
-        Polpanca();
-        Polpanca(string nc, int n, int v, double tdr);
+        Poupanca();
+        Poupanca(string nc, int n, int v, double tdr);
 
         int getVariacao();
         double getTaxaDeRendimento();
@@ -25,4 +25,4 @@ class Polpanca : public Conta{
         void print();
 
 };
-#endif // POLPANCA_H
+#endif // POUPANCA_H
