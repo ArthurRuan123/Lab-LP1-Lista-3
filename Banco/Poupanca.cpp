@@ -5,7 +5,7 @@ Poupanca::Poupanca(){
     taxaDeRendimento = 0;
 }
 
-Poupanca::Poupanca(string nc, int n, int v, double tdr){
+Poupanca::Poupanca(string nc, int n, int v, double tdr) : Conta(){
     setNomeCliente(nc);
     setNumero(n);
     setVariacao(v);

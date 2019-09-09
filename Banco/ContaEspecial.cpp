@@ -4,7 +4,7 @@ ContaEspecial::ContaEspecial(){
     ContaCorrente();
 }
 
-ContaEspecial::ContaEspecial(string nc, int n, double sal){
+ContaEspecial::ContaEspecial(string nc, int n, double sal) : ContaCorrente(){
     setNomeCliente(nc);
     setNumero(n);
     setSalario(sal);

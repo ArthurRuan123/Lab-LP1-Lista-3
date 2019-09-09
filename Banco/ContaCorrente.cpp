@@ -5,7 +5,7 @@ ContaCorrente::ContaCorrente(){
     limite = 0;
 }
 
-ContaCorrente::ContaCorrente(string nc, int n, double sal){
+ContaCorrente::ContaCorrente(string nc, int n, double sal) : Conta(){
     setNomeCliente(nc);
     setNumero(n);
     setSalario(sal);
